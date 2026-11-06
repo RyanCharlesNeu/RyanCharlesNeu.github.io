@@ -4,7 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ryan Neu | Engineering Portfolio</title>
-<meta name="description" content="Engineering portfolio of Ryan Neu">
+<meta name="description" content="Junior Mechanical Engineering student at Villanova University. Robotics, autonomous systems, space, and national security projects.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ryan Neu">
+<meta property="og:title" content="Ryan Neu | Engineering Portfolio">
+<meta property="og:description" content="Junior Mechanical Engineering student at Villanova University. Robotics, autonomous systems, space, and national security projects.">
+<meta property="og:image" content="https://ryancharlesneu.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://ryancharlesneu.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="headshot.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -30,25 +40,25 @@ function nextSrc(img){
 <main class="main">
 <section class="hero">
   <h1>Hey, I'm Ryan Neu.</h1>
-  <p class="headline">Mechanical Engineering Student. Robotics, Autonomous Systems &amp; GNC.</p>
+  <p class="headline">Junior Mechanical Engineering Student at Villanova University. Interested in Robotics, Space &amp; Advancing National Security.</p>
   <div class="loc-row"><span class="loc"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Villanova, PA</span><span class="rule"></span><a class="pill-btn" href="about.html">More about me <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </section>
 <section class="block">
   <h2>Featured Projects</h2>
   <div class="grid"><a class="pcard" href="rover.html">
-  <div class="pimg"><img src="rover/assets/IMG_1217.jpeg" data-c="IMG_1217.jpeg|assets/IMG_1217.jpeg|rover/IMG_1217.jpeg" onerror="nextSrc(this)" alt="Autonomous Rover" loading="lazy"></div>
+  <div class="pimg"><img src="IMG_1217.jpeg" data-c="rover/assets/IMG_1217.jpeg|assets/IMG_1217.jpeg|rover/IMG_1217.jpeg" onerror="nextSrc(this)" alt="Autonomous Rover" loading="lazy"></div>
   <div class="pmeta">
     <div><p class="tag">Autonomy Research</p><h3>Autonomous Rover</h3><p class="blurb">50 lb skid-steer rover for a heterogeneous off-road robot team, with a ROS 2 / Nav2 autonomy stack in simulation.</p></div>
     <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </div>
 </a><a class="pcard" href="liveline.html">
-  <div class="pimg"><img src="liveline/assets/LiveLinePrototypeEnclosure.jpg" data-c="LiveLinePrototypeEnclosure.jpg|assets/LiveLinePrototypeEnclosure.jpg|liveline/LiveLinePrototypeEnclosure.jpg" onerror="nextSrc(this)" alt="LiveLine" loading="lazy"></div>
+  <div class="pimg"><img src="LiveLinePrototypeEnclosure.jpg" data-c="liveline/assets/LiveLinePrototypeEnclosure.jpg|assets/LiveLinePrototypeEnclosure.jpg|liveline/LiveLinePrototypeEnclosure.jpg" onerror="nextSrc(this)" alt="LiveLine" loading="lazy"></div>
   <div class="pmeta">
     <div><p class="tag">Systems Engineering</p><h3>LiveLine</h3><p class="blurb">Clamp-mounted sensor system that monitors 12 metrics on a live power line to catch faults before they cause outages.</p></div>
     <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </div>
 </a><a class="pcard" href="freedom.html">
-  <div class="pimg"><img src="freedom/assets/CombatRobotCompImage.png" data-c="CombatRobotCompImage.png|assets/CombatRobotCompImage.png|freedom/CombatRobotCompImage.png" onerror="nextSrc(this)" alt="FREEDOM" loading="lazy"></div>
+  <div class="pimg"><img src="CombatRobotCompImage.png" data-c="freedom/assets/CombatRobotCompImage.png|assets/CombatRobotCompImage.png|freedom/CombatRobotCompImage.png" onerror="nextSrc(this)" alt="FREEDOM" loading="lazy"></div>
   <div class="pmeta">
     <div><p class="tag">Combat Robotics</p><h3>FREEDOM</h3><p class="blurb">3 lb vertical spinner fielded at NHRL. I led the weapon system from CAD and FEA through machining and electronics.</p></div>
     <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -58,7 +68,7 @@ function nextSrc(img){
 </section>
 <section class="block">
   <h2>Tech Stack</h2>
-  <div class="tiles"><div class="tile"><span class="badge">SW<img class="logo" src="logos/solidworks.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/solidworks.svg'}else{this.remove()}"></span><span>SolidWorks (CAD & FEA)</span></div><div class="tile"><span class="badge">R2<img class="logo" src="logos/ros.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/ros.svg'}else{this.remove()}"></span><span>ROS 2, Nav2 & Gazebo</span></div><div class="tile"><span class="badge">Py<img class="logo" src="logos/python.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/python.svg'}else{this.remove()}"></span><span>Python</span></div><div class="tile"><span class="badge">ML<img class="logo" src="logos/matlab.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/matlab.svg'}else{this.remove()}"></span><span>MATLAB</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="1.5"/><path d="M9 7v10"/><circle cx="6" cy="12" r="1.8"/><path d="M12 12h6"/></svg></span><span>GD&T (ASME Y14.5)</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span><span>Machining: Lathe, Mill, Drill Press & Bandsaw</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18"/><path d="M10 8v4l2 2 2-2V8"/><path d="M7 18h10"/></svg></span><span>3D Printing (PLA & PETG)</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><span>Soldering & Electronics Integration</span></div></div>
+  <div class="tiles"><div class="tile"><span class="badge" style="--c:#E2453A"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><span>SolidWorks (CAD & FEA)</span></div><div class="tile"><span class="badge" style="--c:#5B9BD5"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><path d="M12 7v3M10.5 13.5l-4 3M13.5 13.5l4 3"/></svg></span><span>ROS 2, Nav2 & Gazebo</span></div><div class="tile"><span class="badge" style="--c:#4B8BBE"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg></span><span>Python</span></div><div class="tile"><span class="badge" style="--c:#F07C3E"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M4 20V4"/><path d="M6 16c2-6 4-9 6-6s3 4 6-6"/></svg></span><span>MATLAB</span></div><div class="tile"><span class="badge" style="--c:#2EC4B6"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="1.5"/><path d="M9 7v10M15 7v10"/><circle cx="6" cy="12" r="1.6"/><path d="M11 12h2M17 10.5v3"/></svg></span><span>GD&T (ASME Y14.5)</span></div><div class="tile"><span class="badge" style="--c:#B8C2CC"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><span>Machining: Lathe, Mill, Drill Press & Bandsaw</span></div><div class="tile"><span class="badge" style="--c:#7ED957"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18M10 8v3l2 2 2-2V8M7 18h10M8 16h8"/></svg></span><span>3D Printing (PLA & PETG)</span></div><div class="tile"><span class="badge" style="--c:#E3A44B"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10" y="10" width="4" height="4"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><span>Soldering & Electronics Integration</span></div></div>
   <div class="rule-row"><span class="rule"></span><a class="pill-btn" href="stack.html">View full stack <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </section>
 <footer class="foot">

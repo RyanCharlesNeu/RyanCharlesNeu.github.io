@@ -218,3 +218,23 @@ h1, h2, h3 { color: #fff; letter-spacing: -0.02em; line-height: 1.15; }
 .badge { position: relative; overflow: hidden; }
 .badge .logo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 7px; background: #222; }
 .badge .skill { width: 26px; height: 26px; }
+
+/* Stack icons */
+.badge {
+  width: 56px; height: 56px; border-radius: 14px;
+  background: rgba(19,181,234,0.08); border: 1px solid rgba(19,181,234,0.25); color: var(--sky);
+}
+.badge .skill { width: 28px; height: 28px; stroke-width: 1.6; }
+.tile { gap: 14px; padding: 30px 14px; transition: background .2s; }
+.tile:hover { background: #1c1c1c; }
+.tile:hover .badge { background: rgba(19,181,234,0.14); }
+.srow { transition: background .2s; }
+.srow:hover { background: #1c1c1c; }
+
+/* Tool colors */
+.badge[style*="--c"] {
+  color: var(--c);
+  background: color-mix(in srgb, var(--c) 13%, transparent);
+  border-color: color-mix(in srgb, var(--c) 40%, transparent);
+}
+.tile:hover .badge[style*="--c"] { background: color-mix(in srgb, var(--c) 22%, transparent); }
