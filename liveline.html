@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveLine | Ryan Neu</title>
+<meta name="description" content="Engineering portfolio of Ryan Neu">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="side">
+  <a class="avatar" href="index.html" aria-label="Home">
+    <img src="headshot.png" alt="Ryan Neu" onerror="this.remove()">
+    <span class="initials">RN</span>
+  </a>
+  <div class="status"><span class="dot"></span>Seeking Summer 2027 Internships</div>
+  <nav class="nav"><a href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a><a href="about.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span>About</span></a><a href="projects.html" class="active" aria-current="page"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg><span>Projects</span></a><a href="stack.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>Stack</span></a><a href="contact.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Contact</span></a></nav>
+  <div class="social"><a href="https://github.com/RyanCharlesNeu" target="_blank" rel="noopener" title="GitHub"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg><span>GitHub</span></a><a href="https://www.linkedin.com/in/ryancharlesneu/" target="_blank" rel="noopener" title="LinkedIn"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>LinkedIn</span></a><a href="resume.pdf" target="_blank" rel="noopener" title="Resume"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg><span>Resume</span></a></div>
+</aside>
+<main class="main">
+<section class="hero detail">
+  <a class="back" href="projects.html"><svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> All projects</a>
+  <p class="tag">Systems Engineering</p>
+  <h1>LiveLine</h1>
+</section>
+<section class="block prose"><p><strong>Real-Time Power-Line Fault Monitoring System</strong>
+<br>
+INNOVATE: L3Harris Endowed Summer Program | Role: Systems Engineering Lead and Team Lead</p>
+<p>A clamp-mounted sensor system that attaches to a power line and monitors 12 electrical and mechanical metrics to catch early signs of a developing fault before it causes an outage or wildfire.</p>
+<p><img src="liveline/assets/LiveLinePrototypeEnclosure.jpg" loading="lazy" width="25.3%" /> <img src="liveline/assets/Screenshot%202026-08-06%20204953.png" loading="lazy" width="60%" /></p>
+<p><em>Prototype enclosure (left) and sensor circuit diagram (right). The strain gauge, mounted on the clamp body, is not shown in the circuit.</em></p>
+<h2>Status at a Glance</h2>
+<div class="status-board"><div class="stage"><h4>Design</h4><ol><li class="step done">Sensor selection 5 modalities</li><li class="step done">SolidWorks CAD clamp + enclosure</li><li class="step done">PLA prototypes multiple iterations</li><li class="step done">Circuit design</li></ol></div><div class="stage"><h4>Bench validation</h4><ol><li class="step done">IMU vibration</li><li class="step done">Current sensor within 10%</li><li class="step done">Temperature tracks current</li><li class="step done">Acoustic pencil break test</li><li class="step done">Tension fixed-clamp concept</li></ol></div><div class="stage"><h4>Data</h4><ol><li class="step done">Live sensor data to dashboard</li></ol></div></div>
+<p><em>Completed prototype: design, bench validation of each sensor, and live data streaming to the dashboard.</em></p>
+<h2>Key Results</h2>
+<ul>
+<li><strong>Bench validation across all five modalities:</strong> IMU, current, temperature, and acoustic sensors confirmed working; tension detection proven as a concept.</li>
+<li><strong>Current sensor accurate within 10%</strong> against a watt meter reference, with line temperature rising in step with current draw.</li>
+<li><strong>Acoustic detection confirmed</strong> with a Hsu-Nielsen pencil break test, producing a clear oscilloscope signal.</li>
+<li><strong>Live data dashboard:</strong> sensor output streams to a dashboard showing real-time readings and line status.</li>
+<li><strong>Rapid design iteration:</strong> SolidWorks clamp and enclosure taken through multiple 3D-printed prototypes, with a half-shell hinge for installation on live lines.</li>
+</ul>
+<h2>Demos</h2>
+<figure class="video"><video src="https://github.com/user-attachments/assets/1eeec7b4-399e-44b4-9e49-9601d9c09212" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/1eeec7b4-399e-44b4-9e49-9601d9c09212" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>IMU vibration detection.</em></p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/c27b1532-991c-4ed6-aec1-5699cf689674" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/c27b1532-991c-4ed6-aec1-5699cf689674" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>Tension detection on the fixed-clamp test setup.</em></p>
+<hr />
+<h2>Background</h2>
+<p>Power line failures leave roughly 34 million households without power and cost the U.S. economy an estimated $150 billion every year, and outages are getting more frequent and longer as the grid ages. Many failure modes could be prevented if utilities had live data on the line. A failed line can cut power to homes and hospitals, disable traffic systems, and in dry conditions spark a wildfire. Most lines still aren't monitored in real time, so developing faults are usually caught only after they cause damage.</p>
+<p>This README separates the <strong>full product vision</strong> from <strong>what has been validated in the current prototype.</strong></p>
+<h2>Technical Details</h2>
+<h3>System Architecture</h3>
+<p>LiveLine fuses five sensing modalities into a single clamp-mounted enclosure, each targeting a different fault precursor:</p>
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>Target Signal</th>
+<th>Component</th>
+<th>Photo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strain Gauge</td>
+<td>Tension, force, sag, stress, strain</td>
+<td>CEA-13-250UWA-350</td>
+<td><img src="liveline/assets/LIVELINE2.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>IMU</td>
+<td>Vibration, tilt, mechanical fatigue (via Miner's Rule)</td>
+<td>QCIOT-ICM42688P</td>
+<td><img src="liveline/assets/LIVELINE2%20%281%29.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Temperature Sensor</td>
+<td>Line temperature, ambient temperature</td>
+<td>DS18B20</td>
+<td><img src="liveline/assets/LIVELINE2%20%282%29.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Acoustic Sensor</td>
+<td>Acoustic fault detection</td>
+<td>Nano 30</td>
+<td><img src="liveline/assets/LIVELINE2%20%283%29.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Current Sensor</td>
+<td>Current detection</td>
+<td>SCT-013</td>
+<td><img src="liveline/assets/LIVELINE2%20%284%29.png" loading="lazy" width="80" /></td>
+</tr>
+</tbody>
+</table>
+<h3>CAD and Enclosure</h3>
+<p>The clamp and enclosure were designed in SolidWorks and 3D printed in PLA. The clamp uses a half-shell hinge for easy installation on live lines. The IMU, strain gauge, and acoustic sensor mount directly on the clamp body; the current and temperature sensors sit inside the PLA enclosure.</p>
+<p><img src="liveline/assets/LIVELINE2%20%286%29.png" loading="lazy" width="60%" /> <img src="liveline/assets/LIVELINE2%20%287%29.png" loading="lazy" width="33.1%" /></p>
+<p><em>CAD design (left) and the printed PLA enclosure (right).</em></p>
+<p><img src="liveline/assets/IMG_1275.jpeg" loading="lazy" width="50%" /></p>
+<p><em>Multiple printed prototypes from the design iteration process.</em></p>
+<h3>Live Data Dashboard</h3>
+<p>Live sensor data streams to a dashboard showing real-time readings, current line status, and a failure mode display. Model-based failure prediction is a future improvement.</p>
+<p><img src="liveline/assets/LIVELINE2%20%288%29.png" loading="lazy" width="80%" /></p>
+<p><em>Dashboard with live data view, line status, and failure mode display.</em></p>
+<h3>Testing Scope</h3>
+<p>All testing so far was done on the bench, not on an energized line, which is standard at this stage. The current build uses an aluminum clamp for ease of prototyping; the next iteration moves to a non-conductive material with shielding and weatherproofing before any field deployment.</p>
+<hr />
+<h2>Validation Log</h2>
+<h3>Vibration (IMU)</h3>
+<p>Verified functional.</p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/1eeec7b4-399e-44b4-9e49-9601d9c09212" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/1eeec7b4-399e-44b4-9e49-9601d9c09212" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>IMU vibration detection.</em></p>
+<h3>Current and Temperature</h3>
+<p>The current sensor was tested against a hot pot load on a watt meter and read within 10% of the reference. In the same test, line temperature rose in step with current draw, validating the temperature sensor.</p>
+<p><img src="liveline/assets/Screenshot%202026-08-06%20231237.png" loading="lazy" width="100%" /></p>
+<p><em>Hot pot plugged into a watt meter for a known reference, compared against the sensor's live output.</em></p>
+<h3>Acoustics (Nano 30)</h3>
+<p>Verified functional with a Hsu-Nielsen pencil break test, a standard way to generate a controlled acoustic emission event. The signal was clear on the oscilloscope. Characterizing real fault signatures is limited by the sensor's high sensitivity, which the next testing round addresses.</p>
+<p><img src="liveline/assets/IMG_1261.jpg" loading="lazy" width="55%" /></p>
+<p><em>Oscilloscope output from the pencil break test.</em></p>
+<h3>Tension</h3>
+<p>Large tension events were detected using a fixed-clamp test setup. This validated the sensing concept but not the final mechanical design (see the sliding-clamp redesign under Future Improvements).</p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/c27b1532-991c-4ed6-aec1-5699cf689674" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/c27b1532-991c-4ed6-aec1-5699cf689674" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>Tension detection on the fixed-clamp test setup.</em></p>
+<hr />
+<h2>Future Improvements</h2>
+<ul>
+<li><strong>Sliding-clamp tension sensor:</strong> the first prototype validated tension detection with a fixed test clamp, which doesn't represent field operation. The redesign keeps one clamp fixed while the second slides freely, with a linear potentiometer between them to measure strain along the line directly. Next step is to build and validate it.</li>
+</ul>
+<p><img src="liveline/assets/LIVELINE2%20%285%29.png" loading="lazy" width="60%" /></p>
+<ul>
+<li><strong>Acoustic characterization:</strong> resolve the sensor's high-sensitivity signal handling to validate real fault signatures.</li>
+<li><strong>Non-conductive clamp:</strong> replace aluminum with a plastic that still transmits vibration to the IMU and acoustic sensor.</li>
+<li><strong>EMF shielding:</strong> protect electronics from interference near energized lines.</li>
+<li><strong>IP68 weatherproofing:</strong> move from PLA to a sealed, weather-rated polycarbonate enclosure.</li>
+<li><strong>Solar power:</strong> long-duration unattended deployment without battery replacement.</li>
+<li><strong>Satellite communication:</strong> remote data transmission without local network infrastructure.</li>
+<li><strong>AI failure prediction:</strong> predict failure mode and timing from live sensor data.</li>
+<li><strong>Field validation:</strong> test the full sensor suite against real fault conditions.</li>
+</ul></section>
+<footer class="foot">
+  <a class="cta-band" href="contact.html">
+    <span class="kicker">Have a role or project in mind?</span>
+    <span class="big">Let's talk <svg class="ic big-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  </a>
+  <p class="copy">&copy; 2026 Ryan Neu</p>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autonomous Rover | Ryan Neu</title>
+<meta name="description" content="Engineering portfolio of Ryan Neu">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="side">
+  <a class="avatar" href="index.html" aria-label="Home">
+    <img src="headshot.png" alt="Ryan Neu" onerror="this.remove()">
+    <span class="initials">RN</span>
+  </a>
+  <div class="status"><span class="dot"></span>Seeking Summer 2027 Internships</div>
+  <nav class="nav"><a href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a><a href="about.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span>About</span></a><a href="projects.html" class="active" aria-current="page"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg><span>Projects</span></a><a href="stack.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>Stack</span></a><a href="contact.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Contact</span></a></nav>
+  <div class="social"><a href="https://github.com/RyanCharlesNeu" target="_blank" rel="noopener" title="GitHub"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg><span>GitHub</span></a><a href="https://www.linkedin.com/in/ryancharlesneu/" target="_blank" rel="noopener" title="LinkedIn"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>LinkedIn</span></a><a href="resume.pdf" target="_blank" rel="noopener" title="Resume"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg><span>Resume</span></a></div>
+</aside>
+<main class="main">
+<section class="hero detail">
+  <a class="back" href="projects.html"><svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> All projects</a>
+  <p class="tag">Autonomy Research</p>
+  <h1>Autonomous Rover</h1>
+</section>
+<section class="block prose"><p><strong>Wheeled Rover for a Collaborative Off-Road Robot Team</strong>
+<br>
+L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergraduate Research Assistant</p>
+<p>A 50 lb, 4-wheel skid-steer rover being built to drive autonomously on its own and as part of a heterogeneous robot team, including towing and being towed by other robots.</p>
+<p><img src="rover/assets/IMG_1217.jpeg" loading="lazy" width="55%" /></p>
+<p><em>Current build: fabricated chassis with drivetrain electronics installed.</em></p>
+<h2>Status at a Glance</h2>
+<div class="status-board"><div class="stage"><h4>Hardware</h4><ol><li class="step done">CAD design</li><li class="step done">Chassis fabrication</li><li class="step done">Motors, ESCs, battery, wiring</li><li class="step done">RC drivetrain test</li><li class="step done">FEA of shaft</li><li class="step progress">Wheel drive redesign shaft, coupler, bearing</li><li class="step planned">Testing under receiver/transmitter control</li></ol></div><div class="stage"><h4>Autonomy (simulation)</h4><ol><li class="step done">SLAM mapping slam_toolbox</li><li class="step done">Nav2 waypoint loop</li><li class="step planned">Sensor noise, GPS dropout, EKF</li></ol></div><div class="stage"><h4>Integration</h4><ol><li class="step planned">LiDAR, IMU, GPS, Pi camera on rover</li><li class="step planned">Port ROS 2 stack to hardware</li><li class="step planned">Autonomous physical rover</li></ol></div><div class="stage"><h4>Team research</h4><ol><li class="step done">Drone-assist proof of concept + ARL demo</li><li class="step planned">Robot-to-robot tow mechanism</li><li class="step planned">Legged platform autonomy</li><li class="step planned">Field testing pull/tow</li></ol></div></div><div class="legend"><span class="key done">Complete</span><span class="key progress">In progress</span><span class="key planned">Planned</span></div>
+<h2>Key Results</h2>
+<ul>
+<li><strong>Drone-assisted traction proof of concept:</strong> a loaded wheeled robot that could not move regained motion once a drone lifted part of its weight. Presented a multi-robot coordination demo to the <strong>U.S. Army Research Lab</strong>.</li>
+<li><strong>Fabricated and tested drivetrain:</strong> aluminum 6061-T6 chassis machined in-house; Flipsky 6374 motors and VESC ESCs configured and verified together under RC control.</li>
+<li><strong>Wheel drive redesign backed by fatigue analysis:</strong> a direct motor-shaft wheel mount had a factor of safety of about 0.9. A coupler, separate drive shaft, and outboard support bearing raised it to about <strong>3</strong> under worst-case loading.</li>
+<li><strong>Simulated autonomy stack:</strong> ROS 2 and Gazebo rover that builds a SLAM map from 2D lidar and runs a continuous figure-8 waypoint loop with Nav2.</li>
+</ul>
+<h2>Demos</h2>
+<figure class="video"><video src="https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>Full drivetrain test: all motors driving together under transmitter control.</em></p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>Simulated rover running a continuous figure-8 Nav2 waypoint loop. Gazebo (left), RViz (right).</em></p>
+<h2>Next Steps</h2>
+<ol>
+<li>Install wheels with the drive shaft, coupler, and outboard bearing.</li>
+<li>Validate the wheel drive: static side-load bench test, then powered on-stand run test.</li>
+<li>Add sensor noise, GPS dropout, and EKF state estimation to the simulation.</li>
+<li>Mount and integrate LiDAR, IMU, and GPS on the physical rover.</li>
+<li>Port the ROS 2 navigation stack from simulation to hardware.</li>
+</ol>
+<p>Longer term: Raspberry Pi optical detection, PWM-split ESC wiring, possible gear reduction, robot-to-robot connection mechanism, legged platform autonomy, and field testing of pull/tow capability.</p>
+<hr />
+<h2>Background</h2>
+<p>This work is part of a broader research effort, <strong>Autonomous Cyber-Physical Vehicle Coordination on Complex Terrains</strong>. The idea is that a team of robots with different physical strengths can lean on each other to cross terrain that no single platform could handle alone.</p>
+<p><img src="rover/assets/AutonomousRobotTeam.png" loading="lazy" width="60%" /></p>
+<p><em>Renderings of a heterogeneous robot team operating together.</em></p>
+<p>My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.</p>
+<p><strong>Proof of concept.</strong> A wheeled robot under load, initially unable to move, regains traction once a drone lifts part of its weight, reducing static friction enough to drive forward. For this, I calibrated a RadioLink drone using ArduPilot and delivered the demo and presentation to the U.S. Army Research Lab.</p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<h2>Technical Details</h2>
+<h3>Design Requirements</h3>
+<p>Motor and material choices were driven by the pull and be-pulled requirement. Weight and torque calculations set the motor sizing needed to move the rover itself and tow another robot, and the CAD design was built around the resulting component list.</p>
+<p><img src="rover/assets/Screenshot%202026-08-13%20144500.png" loading="lazy" width="40%" /></p>
+<p><em>CAD assembly with motors, wheels, and electronics.</em></p>
+<h3>Wheel Attachment Analysis</h3>
+<p>Driving the wheel directly off the motor shaft gave a factor of safety against shaft fatigue of about 0.9, at or below the failure threshold. The current design uses a coupler to a separate drive shaft with an outboard support bearing near the wheel. The bearing takes the bending load before it reaches the motor shaft or the motor's internal bearings, raising the factor of safety to about 3 under worst-case loading. The motor was disassembled to inspect its internals and characterize the load it could actually handle, rather than relying only on manufacturer specs.</p>
+<h3>Bill of Materials</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Spec</th>
+<th>Photo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drive Motor</td>
+<td>Wheel drive, sized for pull/tow load</td>
+<td>Flipsky 6374, 140KV, current-limited to 15A</td>
+<td><img src="rover/assets/Screenshot%202026-08-08%20010406.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>ESC</td>
+<td>Motor speed control</td>
+<td>FLIPSKY Mini V6 MK5, VESC 6.6, aluminum anodized heat sink</td>
+<td><img src="rover/assets/Screenshot%202026-08-08%20010217.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Battery</td>
+<td>Power</td>
+<td>Zeee 6S LiPo, 10000mAh, 22.2V, 120C, EC5 connector</td>
+<td><img src="rover/assets/Screenshot%202026-08-08%20010133.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Chassis Material</td>
+<td>Structural frame</td>
+<td>Aluminum 6061-T6</td>
+<td><img src="rover/assets/ALUMINUM.jpg" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Motor Mount</td>
+<td>Secures motor to chassis</td>
+<td>N63 Adjustable Motor Mount, 6374 Brushless Motor Holder</td>
+<td><img src="rover/assets/Screenshot%202026-08-13%20211015.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Wheels</td>
+<td>Traction/mobility</td>
+<td>4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity</td>
+<td><img src="rover/assets/BigYellowWheelsCropped.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Enclosure/Mount Material</td>
+<td>3D-printed battery/ESC mounts</td>
+<td>PETG</td>
+<td><img src="rover/assets/Filament.jpg" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Shaft Coupler</td>
+<td>Connects the motor shaft to the drive shaft</td>
+<td></td>
+<td><img src="rover/assets/Screenshot%202026-10-27%20235015.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Drive Shaft</td>
+<td>Transmits motor torque to the wheel</td>
+<td></td>
+<td><img src="rover/assets/Screenshot%202026-10-27%20235029.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Outboard Support Bearing</td>
+<td>Supports the drive shaft near the wheel and carries bending load into the chassis</td>
+<td></td>
+<td><img src="rover/assets/Screenshot%202026-10-27%20235148.png" loading="lazy" width="80" /></td>
+</tr>
+<tr>
+<td>Wiring</td>
+<td>Motor/ESC power connections</td>
+<td>12 AWG wire, EC5 connectors</td>
+<td><img src="rover/assets/Black%20and%20Red.jpg" loading="lazy" width="80" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Autonomy Simulation</h3>
+<p>A ROS 2 and Gazebo simulation of a 4-wheel skid-steer rover, built to prototype the autonomy stack before the physical rover has wheels and lidar. Not yet deployed to hardware.</p>
+<p><strong>What I built:</strong> the rover model and world in SDF, the ROS-Gazebo bridge and launch files, a tuned Nav2 configuration, waypoint-loop and teleop scripts, and a one-command startup and shutdown system.</p>
+<p><strong>Stack:</strong> ROS 2 (Lyrical), Gazebo, slam_toolbox, Nav2, RViz, Python (rclpy).</p>
+<p><strong>Simplifications:</strong> noise-free Gazebo odometry and a fixed map-to-odom transform in place of AMCL localization, which is not representative of real hardware. Adding sensor noise, GPS dropout, and an EKF is the next step before porting to the physical rover.</p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>slam_toolbox building an occupancy grid from 2D lidar as the rover drives a walled room, visualized in RViz. The saved map is reused for navigation.</em></p>
+<p>The navigation loop uses a custom Python script that sends Nav2 waypoint goals continuously, switching to the next waypoint as the rover approaches the current one so motion stays smooth instead of stopping at each point.</p>
+<hr />
+<h2>Build Log</h2>
+<h3>Fabrication</h3>
+<p>Fabricated in Villanova's machine shop using an angle grinder, drill press, lathe, 3D printer (PETG), and soldering iron. Lock nuts are used throughout to handle vibration.</p>
+<p><strong>Chassis</strong></p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>Chassis assembly, machined from aluminum using an angle grinder and drill press.</em></p>
+<p><img src="rover/assets/ROVERwithLID2.jpeg" loading="lazy" width="40%" /></p>
+<p><em>Completed chassis with lid, ready for component mounting.</em></p>
+<p><strong>Motor Mounting</strong></p>
+<p><img src="rover/assets/MotorMounting.jpeg" loading="lazy" width="40%" /></p>
+<p><em>Mounting holes drilled into the aluminum chassis with a drill press; motors bolted in place.</em></p>
+<p><strong>Battery Holder and ESC Mounts</strong></p>
+<p><img src="rover/assets/ESC%26BatteryMount.jpeg" loading="lazy" width="39%" /></p>
+<p><em>3D-printed PETG battery holder and ESC mounts, secured to the bottom plate.</em></p>
+<p>The battery mount uses #10 bolts (24 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit to seat the ESCs securely while allowing removal.</p>
+<p><img src="rover/assets/IMG_1199.jpeg" loading="lazy" width="39%" /></p>
+<p><em>ESC mounts installed with ESCs seated, ready for wiring.</em></p>
+<h3>Electronics and Testing</h3>
+<p><strong>Wiring</strong></p>
+<p><img src="rover/assets/IMG_1206.jpeg" loading="lazy" width="39%" />&nbsp;&nbsp;&nbsp;&nbsp; <img src="rover/assets/WiringRover.JPEG" loading="lazy" width="33.51%" /></p>
+<p><em>ESCs soldered together and wired in parallel without PWM signal splitting. Simple and sufficient for this stage; planned for cleanup in a later iteration.</em></p>
+<p><strong>ESC Configuration</strong></p>
+<p><img src="rover/assets/IMG_1217.jpeg" loading="lazy" width="60%" /></p>
+<p><em>ESC configuration in VESC Tool.</em></p>
+<figure class="video"><video src="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<p><em>Single motor spinning during a VESC Tool test, confirming ESC configuration before full drivetrain testing.</em></p>
+<p><strong>Full Drivetrain Test</strong></p>
+<p>All ESC ground and signal wires were tied to a single receiver to test forward and backward motion with a transmitter. This confirmed controller responsiveness across every motor before moving on to sensing and autonomy (see the demo video under Demos).</p></section>
+<footer class="foot">
+  <a class="cta-band" href="contact.html">
+    <span class="kicker">Have a role or project in mind?</span>
+    <span class="big">Let's talk <svg class="ic big-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  </a>
+  <p class="copy">&copy; 2026 Ryan Neu</p>
+</footer>
+</main>
+</body>
+</html>
