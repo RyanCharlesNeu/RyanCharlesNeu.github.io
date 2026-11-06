@@ -9,9 +9,9 @@
 <meta property="og:site_name" content="Ryan Neu">
 <meta property="og:title" content="Autonomous Rover | Ryan Neu">
 <meta property="og:description" content="Junior Mechanical Engineering student at Villanova University. Robotics, autonomous systems, space, and national security projects.">
-<meta property="og:image" content="https://ryancharlesneu.github.io/og-image.png">
+<meta property="og:image" content="https://ryancharlesneu.github.io/og-card.png">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="627">
 <meta property="og:url" content="https://ryancharlesneu.github.io/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="headshot.png">
@@ -59,9 +59,9 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <li><strong>Simulated autonomy stack:</strong> ROS 2 and Gazebo rover that builds a SLAM map from 2D lidar and runs a continuous figure-8 waypoint loop with Nav2.</li>
 </ul>
 <h2>Demos</h2>
-<figure class="video"><video src="https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<figure class="video"><video src="https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b#t=0.1" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <p><em>Full drivetrain test: all motors driving together under transmitter control.</em></p>
-<figure class="video"><video src="https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<figure class="video"><video src="https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929#t=0.1" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <p><em>Simulated rover running a continuous figure-8 Nav2 waypoint loop. Gazebo (left), RViz (right).</em></p>
 <h2>Next Steps</h2>
 <ol>
@@ -79,7 +79,7 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <p><em>Renderings of a heterogeneous robot team operating together.</em></p>
 <p>My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.</p>
 <p><strong>Proof of concept.</strong> A wheeled robot under load, initially unable to move, regains traction once a drone lifts part of its weight, reducing static friction enough to drive forward. For this, I calibrated a RadioLink drone using ArduPilot and delivered the demo and presentation to the U.S. Army Research Lab.</p>
-<figure class="video"><video src="https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<figure class="video"><video src="https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888#t=0.1" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <h2>Technical Details</h2>
 <h3>Design Requirements</h3>
 <p>Motor and material choices were driven by the pull and be-pulled requirement. Weight and torque calculations set the motor sizing needed to move the rover itself and tow another robot, and the CAD design was built around the resulting component list.</p>
@@ -171,7 +171,7 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <p><strong>What I built:</strong> the rover model and world in SDF, the ROS-Gazebo bridge and launch files, a tuned Nav2 configuration, waypoint-loop and teleop scripts, and a one-command startup and shutdown system.</p>
 <p><strong>Stack:</strong> ROS 2 (Lyrical), Gazebo, slam_toolbox, Nav2, RViz, Python (rclpy).</p>
 <p><strong>Simplifications:</strong> noise-free Gazebo odometry and a fixed map-to-odom transform in place of AMCL localization, which is not representative of real hardware. Adding sensor noise, GPS dropout, and an EKF is the next step before porting to the physical rover.</p>
-<figure class="video"><video src="https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<figure class="video"><video src="https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55#t=0.1" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <p><em>slam_toolbox building an occupancy grid from 2D lidar as the rover drives a walled room, visualized in RViz. The saved map is reused for navigation.</em></p>
 <p>The navigation loop uses a custom Python script that sends Nav2 waypoint goals continuously, switching to the next waypoint as the rover approaches the current one so motion stays smooth instead of stopping at each point.</p>
 <hr />
@@ -179,7 +179,7 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <h3>Fabrication</h3>
 <p>Fabricated in Villanova's machine shop using an angle grinder, drill press, lathe, 3D printer (PETG), and soldering iron. Lock nuts are used throughout to handle vibration.</p>
 <p><strong>Chassis</strong></p>
-<figure class="video"><video src="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<figure class="video"><video src="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f#t=0.1" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <p><em>Chassis assembly, machined from aluminum using an angle grinder and drill press.</em></p>
 <p><img src="ROVERwithLID2.jpeg" data-c="rover/assets/ROVERwithLID2.jpeg|assets/ROVERwithLID2.jpeg|rover/ROVERwithLID2.jpeg" onerror="nextSrc(this)" loading="lazy" width="40%" /></p>
 <p><em>Completed chassis with lid, ready for component mounting.</em></p>
@@ -199,7 +199,7 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <p><strong>ESC Configuration</strong></p>
 <p><img src="IMG_1217.jpeg" data-c="rover/assets/IMG_1217.jpeg|assets/IMG_1217.jpeg|rover/IMG_1217.jpeg" onerror="nextSrc(this)" loading="lazy" width="60%" /></p>
 <p><em>ESC configuration in VESC Tool.</em></p>
-<figure class="video"><video src="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7" target="_blank" rel="noopener">Open video in a new tab</a></figure>
+<figure class="video"><video src="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7#t=0.1" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <p><em>Single motor spinning during a VESC Tool test, confirming ESC configuration before full drivetrain testing.</em></p>
 <p><strong>Full Drivetrain Test</strong></p>
 <p>All ESC ground and signal wires were tied to a single receiver to test forward and backward motion with a transmitter. This confirmed controller responsiveness across every motor before moving on to sensing and autonomy (see the demo video under Demos).</p></section>
