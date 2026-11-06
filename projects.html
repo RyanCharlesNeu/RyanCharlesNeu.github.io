@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="style.css">
 <script>
 function nextSrc(img){
+  if(img.hasAttribute("srcset")){img.removeAttribute("srcset");img.removeAttribute("sizes");return;}
   var list=(img.dataset.c||"").split("|").filter(Boolean);
   if(!list.length){img.onerror=null;return;}
   img.src=list.shift(); img.dataset.c=list.join("|");
