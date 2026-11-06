@@ -215,3 +215,6 @@ h1, h2, h3 { color: #fff; letter-spacing: -0.02em; line-height: 1.15; }
 .chip { padding: 10px 16px; border-radius: 10px; background: var(--card); color: #e0e0e0; font-weight: 500; font-size: 0.95rem; }
 .mini { margin-left: 10px; font-size: 0.9rem; text-decoration: none; }
 .mini:hover { text-decoration: underline; }
+.badge { position: relative; overflow: hidden; }
+.badge .logo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 7px; background: #222; }
+.badge .skill { width: 26px; height: 26px; }

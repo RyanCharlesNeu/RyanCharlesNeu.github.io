@@ -9,6 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+function nextSrc(img){
+  var list=(img.dataset.c||"").split("|").filter(Boolean);
+  if(!list.length){img.onerror=null;return;}
+  img.src=list.shift(); img.dataset.c=list.join("|");
+}
+</script>
 </head>
 <body>
 <aside class="side">
@@ -30,7 +37,7 @@
 <br>
 L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergraduate Research Assistant</p>
 <p>A 50 lb, 4-wheel skid-steer rover being built to drive autonomously on its own and as part of a heterogeneous robot team, including towing and being towed by other robots.</p>
-<p><img src="rover/assets/IMG_1217.jpeg" loading="lazy" width="55%" /></p>
+<p><img src="rover/assets/IMG_1217.jpeg" data-c="IMG_1217.jpeg|assets/IMG_1217.jpeg|rover/IMG_1217.jpeg" onerror="nextSrc(this)" loading="lazy" width="55%" /></p>
 <p><em>Current build: fabricated chassis with drivetrain electronics installed.</em></p>
 <h2>Status at a Glance</h2>
 <div class="status-board"><div class="stage"><h4>Hardware</h4><ol><li class="step done">CAD design</li><li class="step done">Chassis fabrication</li><li class="step done">Motors, ESCs, battery, wiring</li><li class="step done">RC drivetrain test</li><li class="step done">FEA of shaft</li><li class="step progress">Wheel drive redesign shaft, coupler, bearing</li><li class="step planned">Testing under receiver/transmitter control</li></ol></div><div class="stage"><h4>Autonomy (simulation)</h4><ol><li class="step done">SLAM mapping slam_toolbox</li><li class="step done">Nav2 waypoint loop</li><li class="step planned">Sensor noise, GPS dropout, EKF</li></ol></div><div class="stage"><h4>Integration</h4><ol><li class="step planned">LiDAR, IMU, GPS, Pi camera on rover</li><li class="step planned">Port ROS 2 stack to hardware</li><li class="step planned">Autonomous physical rover</li></ol></div><div class="stage"><h4>Team research</h4><ol><li class="step done">Drone-assist proof of concept + ARL demo</li><li class="step planned">Robot-to-robot tow mechanism</li><li class="step planned">Legged platform autonomy</li><li class="step planned">Field testing pull/tow</li></ol></div></div><div class="legend"><span class="key done">Complete</span><span class="key progress">In progress</span><span class="key planned">Planned</span></div>
@@ -58,7 +65,7 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <hr />
 <h2>Background</h2>
 <p>This work is part of a broader research effort, <strong>Autonomous Cyber-Physical Vehicle Coordination on Complex Terrains</strong>. The idea is that a team of robots with different physical strengths can lean on each other to cross terrain that no single platform could handle alone.</p>
-<p><img src="rover/assets/AutonomousRobotTeam.png" loading="lazy" width="60%" /></p>
+<p><img src="rover/assets/AutonomousRobotTeam.png" data-c="AutonomousRobotTeam.png|assets/AutonomousRobotTeam.png|rover/AutonomousRobotTeam.png" onerror="nextSrc(this)" loading="lazy" width="60%" /></p>
 <p><em>Renderings of a heterogeneous robot team operating together.</em></p>
 <p>My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.</p>
 <p><strong>Proof of concept.</strong> A wheeled robot under load, initially unable to move, regains traction once a drone lifts part of its weight, reducing static friction enough to drive forward. For this, I calibrated a RadioLink drone using ArduPilot and delivered the demo and presentation to the U.S. Army Research Lab.</p>
@@ -66,7 +73,7 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <h2>Technical Details</h2>
 <h3>Design Requirements</h3>
 <p>Motor and material choices were driven by the pull and be-pulled requirement. Weight and torque calculations set the motor sizing needed to move the rover itself and tow another robot, and the CAD design was built around the resulting component list.</p>
-<p><img src="rover/assets/Screenshot%202026-08-13%20144500.png" loading="lazy" width="40%" /></p>
+<p><img src="rover/assets/Screenshot%202026-08-13%20144500.png" data-c="Screenshot%202026-08-13%20144500.png|assets/Screenshot%202026-08-13%20144500.png|rover/Screenshot%202026-08-13%20144500.png" onerror="nextSrc(this)" loading="lazy" width="40%" /></p>
 <p><em>CAD assembly with motors, wheels, and electronics.</em></p>
 <h3>Wheel Attachment Analysis</h3>
 <p>Driving the wheel directly off the motor shaft gave a factor of safety against shaft fatigue of about 0.9, at or below the failure threshold. The current design uses a coupler to a separate drive shaft with an outboard support bearing near the wheel. The bearing takes the bending load before it reaches the motor shaft or the motor's internal bearings, raising the factor of safety to about 3 under worst-case loading. The motor was disassembled to inspect its internals and characterize the load it could actually handle, rather than relying only on manufacturer specs.</p>
@@ -85,67 +92,67 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <td>Drive Motor</td>
 <td>Wheel drive, sized for pull/tow load</td>
 <td>Flipsky 6374, 140KV, current-limited to 15A</td>
-<td><img src="rover/assets/Screenshot%202026-08-08%20010406.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Screenshot%202026-08-08%20010406.png" data-c="Screenshot%202026-08-08%20010406.png|assets/Screenshot%202026-08-08%20010406.png|rover/Screenshot%202026-08-08%20010406.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>ESC</td>
 <td>Motor speed control</td>
 <td>FLIPSKY Mini V6 MK5, VESC 6.6, aluminum anodized heat sink</td>
-<td><img src="rover/assets/Screenshot%202026-08-08%20010217.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Screenshot%202026-08-08%20010217.png" data-c="Screenshot%202026-08-08%20010217.png|assets/Screenshot%202026-08-08%20010217.png|rover/Screenshot%202026-08-08%20010217.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Battery</td>
 <td>Power</td>
 <td>Zeee 6S LiPo, 10000mAh, 22.2V, 120C, EC5 connector</td>
-<td><img src="rover/assets/Screenshot%202026-08-08%20010133.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Screenshot%202026-08-08%20010133.png" data-c="Screenshot%202026-08-08%20010133.png|assets/Screenshot%202026-08-08%20010133.png|rover/Screenshot%202026-08-08%20010133.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Chassis Material</td>
 <td>Structural frame</td>
 <td>Aluminum 6061-T6</td>
-<td><img src="rover/assets/ALUMINUM.jpg" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/ALUMINUM.jpg" data-c="ALUMINUM.jpg|assets/ALUMINUM.jpg|rover/ALUMINUM.jpg" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Motor Mount</td>
 <td>Secures motor to chassis</td>
 <td>N63 Adjustable Motor Mount, 6374 Brushless Motor Holder</td>
-<td><img src="rover/assets/Screenshot%202026-08-13%20211015.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Screenshot%202026-08-13%20211015.png" data-c="Screenshot%202026-08-13%20211015.png|assets/Screenshot%202026-08-13%20211015.png|rover/Screenshot%202026-08-13%20211015.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Wheels</td>
 <td>Traction/mobility</td>
 <td>4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity</td>
-<td><img src="rover/assets/BigYellowWheelsCropped.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/BigYellowWheelsCropped.png" data-c="BigYellowWheelsCropped.png|assets/BigYellowWheelsCropped.png|rover/BigYellowWheelsCropped.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Enclosure/Mount Material</td>
 <td>3D-printed battery/ESC mounts</td>
 <td>PETG</td>
-<td><img src="rover/assets/Filament.jpg" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Filament.jpg" data-c="Filament.jpg|assets/Filament.jpg|rover/Filament.jpg" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Shaft Coupler</td>
 <td>Connects the motor shaft to the drive shaft</td>
 <td></td>
-<td><img src="rover/assets/Screenshot%202026-10-27%20235015.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Screenshot%202026-10-27%20235015.png" data-c="Screenshot%202026-10-27%20235015.png|assets/Screenshot%202026-10-27%20235015.png|rover/Screenshot%202026-10-27%20235015.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Drive Shaft</td>
 <td>Transmits motor torque to the wheel</td>
 <td></td>
-<td><img src="rover/assets/Screenshot%202026-10-27%20235029.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Screenshot%202026-10-27%20235029.png" data-c="Screenshot%202026-10-27%20235029.png|assets/Screenshot%202026-10-27%20235029.png|rover/Screenshot%202026-10-27%20235029.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Outboard Support Bearing</td>
 <td>Supports the drive shaft near the wheel and carries bending load into the chassis</td>
 <td></td>
-<td><img src="rover/assets/Screenshot%202026-10-27%20235148.png" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Screenshot%202026-10-27%20235148.png" data-c="Screenshot%202026-10-27%20235148.png|assets/Screenshot%202026-10-27%20235148.png|rover/Screenshot%202026-10-27%20235148.png" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 <tr>
 <td>Wiring</td>
 <td>Motor/ESC power connections</td>
 <td>12 AWG wire, EC5 connectors</td>
-<td><img src="rover/assets/Black%20and%20Red.jpg" loading="lazy" width="80" /></td>
+<td><img src="rover/assets/Black%20and%20Red.jpg" data-c="Black%20and%20Red.jpg|assets/Black%20and%20Red.jpg|rover/Black%20and%20Red.jpg" onerror="nextSrc(this)" loading="lazy" width="80" /></td>
 </tr>
 </tbody>
 </table>
@@ -164,23 +171,23 @@ L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergr
 <p><strong>Chassis</strong></p>
 <figure class="video"><video src="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <p><em>Chassis assembly, machined from aluminum using an angle grinder and drill press.</em></p>
-<p><img src="rover/assets/ROVERwithLID2.jpeg" loading="lazy" width="40%" /></p>
+<p><img src="rover/assets/ROVERwithLID2.jpeg" data-c="ROVERwithLID2.jpeg|assets/ROVERwithLID2.jpeg|rover/ROVERwithLID2.jpeg" onerror="nextSrc(this)" loading="lazy" width="40%" /></p>
 <p><em>Completed chassis with lid, ready for component mounting.</em></p>
 <p><strong>Motor Mounting</strong></p>
-<p><img src="rover/assets/MotorMounting.jpeg" loading="lazy" width="40%" /></p>
+<p><img src="rover/assets/MotorMounting.jpeg" data-c="MotorMounting.jpeg|assets/MotorMounting.jpeg|rover/MotorMounting.jpeg" onerror="nextSrc(this)" loading="lazy" width="40%" /></p>
 <p><em>Mounting holes drilled into the aluminum chassis with a drill press; motors bolted in place.</em></p>
 <p><strong>Battery Holder and ESC Mounts</strong></p>
-<p><img src="rover/assets/ESC%26BatteryMount.jpeg" loading="lazy" width="39%" /></p>
+<p><img src="rover/assets/ESC%26BatteryMount.jpeg" data-c="ESC%26BatteryMount.jpeg|assets/ESC%26BatteryMount.jpeg|rover/ESC%26BatteryMount.jpeg" onerror="nextSrc(this)" loading="lazy" width="39%" /></p>
 <p><em>3D-printed PETG battery holder and ESC mounts, secured to the bottom plate.</em></p>
 <p>The battery mount uses #10 bolts (24 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit to seat the ESCs securely while allowing removal.</p>
-<p><img src="rover/assets/IMG_1199.jpeg" loading="lazy" width="39%" /></p>
+<p><img src="rover/assets/IMG_1199.jpeg" data-c="IMG_1199.jpeg|assets/IMG_1199.jpeg|rover/IMG_1199.jpeg" onerror="nextSrc(this)" loading="lazy" width="39%" /></p>
 <p><em>ESC mounts installed with ESCs seated, ready for wiring.</em></p>
 <h3>Electronics and Testing</h3>
 <p><strong>Wiring</strong></p>
-<p><img src="rover/assets/IMG_1206.jpeg" loading="lazy" width="39%" />&nbsp;&nbsp;&nbsp;&nbsp; <img src="rover/assets/WiringRover.JPEG" loading="lazy" width="33.51%" /></p>
+<p><img src="rover/assets/IMG_1206.jpeg" data-c="IMG_1206.jpeg|assets/IMG_1206.jpeg|rover/IMG_1206.jpeg" onerror="nextSrc(this)" loading="lazy" width="39%" />&nbsp;&nbsp;&nbsp;&nbsp; <img src="rover/assets/WiringRover.JPEG" data-c="WiringRover.JPEG|assets/WiringRover.JPEG|rover/WiringRover.JPEG" onerror="nextSrc(this)" loading="lazy" width="33.51%" /></p>
 <p><em>ESCs soldered together and wired in parallel without PWM signal splitting. Simple and sufficient for this stage; planned for cleanup in a later iteration.</em></p>
 <p><strong>ESC Configuration</strong></p>
-<p><img src="rover/assets/IMG_1217.jpeg" loading="lazy" width="60%" /></p>
+<p><img src="rover/assets/IMG_1217.jpeg" data-c="IMG_1217.jpeg|assets/IMG_1217.jpeg|rover/IMG_1217.jpeg" onerror="nextSrc(this)" loading="lazy" width="60%" /></p>
 <p><em>ESC configuration in VESC Tool.</em></p>
 <figure class="video"><video src="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7" controls preload="metadata" playsinline></video><a class="video-link" href="https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7" target="_blank" rel="noopener">Open video in a new tab</a></figure>
 <p><em>Single motor spinning during a VESC Tool test, confirming ESC configuration before full drivetrain testing.</em></p>

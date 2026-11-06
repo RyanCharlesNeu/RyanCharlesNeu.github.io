@@ -9,6 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+function nextSrc(img){
+  var list=(img.dataset.c||"").split("|").filter(Boolean);
+  if(!list.length){img.onerror=null;return;}
+  img.src=list.shift(); img.dataset.c=list.join("|");
+}
+</script>
 </head>
 <body>
 <aside class="side">
@@ -29,19 +36,19 @@
 <section class="block">
   <h2>Featured Projects</h2>
   <div class="grid"><a class="pcard" href="rover.html">
-  <div class="pimg"><img src="rover/assets/IMG_1217.jpeg" alt="Autonomous Rover" loading="lazy"></div>
+  <div class="pimg"><img src="rover/assets/IMG_1217.jpeg" data-c="IMG_1217.jpeg|assets/IMG_1217.jpeg|rover/IMG_1217.jpeg" onerror="nextSrc(this)" alt="Autonomous Rover" loading="lazy"></div>
   <div class="pmeta">
     <div><p class="tag">Autonomy Research</p><h3>Autonomous Rover</h3><p class="blurb">50 lb skid-steer rover for a heterogeneous off-road robot team, with a ROS 2 / Nav2 autonomy stack in simulation.</p></div>
     <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </div>
 </a><a class="pcard" href="liveline.html">
-  <div class="pimg"><img src="liveline/assets/LiveLinePrototypeEnclosure.jpg" alt="LiveLine" loading="lazy"></div>
+  <div class="pimg"><img src="liveline/assets/LiveLinePrototypeEnclosure.jpg" data-c="LiveLinePrototypeEnclosure.jpg|assets/LiveLinePrototypeEnclosure.jpg|liveline/LiveLinePrototypeEnclosure.jpg" onerror="nextSrc(this)" alt="LiveLine" loading="lazy"></div>
   <div class="pmeta">
     <div><p class="tag">Systems Engineering</p><h3>LiveLine</h3><p class="blurb">Clamp-mounted sensor system that monitors 12 metrics on a live power line to catch faults before they cause outages.</p></div>
     <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </div>
 </a><a class="pcard" href="freedom.html">
-  <div class="pimg"><img src="freedom/assets/CombatRobotCompImage.png" alt="FREEDOM" loading="lazy"></div>
+  <div class="pimg"><img src="freedom/assets/CombatRobotCompImage.png" data-c="CombatRobotCompImage.png|assets/CombatRobotCompImage.png|freedom/CombatRobotCompImage.png" onerror="nextSrc(this)" alt="FREEDOM" loading="lazy"></div>
   <div class="pmeta">
     <div><p class="tag">Combat Robotics</p><h3>FREEDOM</h3><p class="blurb">3 lb vertical spinner fielded at NHRL. I led the weapon system from CAD and FEA through machining and electronics.</p></div>
     <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -51,7 +58,7 @@
 </section>
 <section class="block">
   <h2>Tech Stack</h2>
-  <div class="tiles"><div class="tile"><span class="badge">SW</span><span>SolidWorks (CAD & FEA)</span></div><div class="tile"><span class="badge">R2</span><span>ROS 2, Nav2 & Gazebo</span></div><div class="tile"><span class="badge">Py</span><span>Python</span></div><div class="tile"><span class="badge">ML</span><span>MATLAB</span></div><div class="tile"><span class="badge">GD</span><span>GD&T (ASME Y14.5)</span></div><div class="tile"><span class="badge">Mc</span><span>Machining: Lathe, Mill, Drill Press & Bandsaw</span></div><div class="tile"><span class="badge">3D</span><span>3D Printing (PLA & PETG)</span></div><div class="tile"><span class="badge">El</span><span>Soldering & Electronics Integration</span></div></div>
+  <div class="tiles"><div class="tile"><span class="badge">SW<img class="logo" src="logos/solidworks.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/solidworks.svg'}else{this.remove()}"></span><span>SolidWorks (CAD & FEA)</span></div><div class="tile"><span class="badge">R2<img class="logo" src="logos/ros.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/ros.svg'}else{this.remove()}"></span><span>ROS 2, Nav2 & Gazebo</span></div><div class="tile"><span class="badge">Py<img class="logo" src="logos/python.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/python.svg'}else{this.remove()}"></span><span>Python</span></div><div class="tile"><span class="badge">ML<img class="logo" src="logos/matlab.png" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logos/matlab.svg'}else{this.remove()}"></span><span>MATLAB</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="1.5"/><path d="M9 7v10"/><circle cx="6" cy="12" r="1.8"/><path d="M12 12h6"/></svg></span><span>GD&T (ASME Y14.5)</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span><span>Machining: Lathe, Mill, Drill Press & Bandsaw</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18"/><path d="M10 8v4l2 2 2-2V8"/><path d="M7 18h10"/></svg></span><span>3D Printing (PLA & PETG)</span></div><div class="tile"><span class="badge"><svg class="ic skill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><span>Soldering & Electronics Integration</span></div></div>
   <div class="rule-row"><span class="rule"></span><a class="pill-btn" href="stack.html">View full stack <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </section>
 <footer class="foot">
