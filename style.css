@@ -238,3 +238,12 @@ h1, h2, h3 { color: #fff; letter-spacing: -0.02em; line-height: 1.15; }
   border-color: color-mix(in srgb, var(--c) 40%, transparent);
 }
 .tile:hover .badge[style*="--c"] { background: color-mix(in srgb, var(--c) 22%, transparent); }
+
+/* Keep demo videos compact */
+.video { max-width: 640px; margin: 16px 0 8px; }
+.video video {
+  width: 100%; height: auto; max-height: 400px;
+  object-fit: contain; background: #0d0d0d;
+  border: 1px solid var(--line); border-radius: 12px;
+}
+@media (max-width: 860px) { .video video { max-height: 320px; } }
